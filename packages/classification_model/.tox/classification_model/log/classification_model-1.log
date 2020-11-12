@@ -1,0 +1,26 @@
+action: classification_model, msg: getenv
+cwd: C:\Users\Bumsky\Desktop\Deployment-of-Titanic-Ml-Model\packages\classification_model
+cmd: 'C:\Users\Bumsky\Desktop\Deployment-of-Titanic-Ml-Model\packages\classification_model\.tox\classification_model\Scripts\pip.EXE' install -rrequirements.txt
+Collecting numpy==1.19.4 (from -r requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/7b/05/558d6ac441c3c84ec413ba85f5f8e978283b4d105e4a56cff0f2c46b4134/numpy-1.19.4-cp37-cp37m-win32.whl
+Collecting pandas==1.1.4 (from -r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/f4/32/e3d08b3f2d7ea5ec1eda9667bb6d59ba906d7fa45041065d7feba1786be6/pandas-1.1.4-cp37-cp37m-win32.whl
+Collecting scikit_learn==0.23.0 (from -r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/c6/1c/05fffda99f42966925e042f4d010b30bd4fb1ac9b3737a6e06e5c5a1604d/scikit_learn-0.23.0-cp37-cp37m-win32.whl
+Collecting joblib==0.17.0 (from -r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/fc/c9/f58220ac44a1592f79a343caba12f6837f9e0c04c196176a3d66338e1ea8/joblib-0.17.0-py3-none-any.whl
+Collecting python-dateutil>=2.7.3 (from pandas==1.1.4->-r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl
+Collecting pytz>=2017.2 (from pandas==1.1.4->-r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/12/f8/ff09af6ff61a3efaad5f61ba5facdf17e7722c4393f7d8a66674d2dbd29f/pytz-2020.4-py2.py3-none-any.whl
+Collecting scipy>=0.19.1 (from scikit_learn==0.23.0->-r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/f4/4a/d2a1ace4fb6f94a4f6ac553be45249719c25185e7b10975f916e523d146c/scipy-1.5.4-cp37-cp37m-win32.whl
+Collecting threadpoolctl>=2.0.0 (from scikit_learn==0.23.0->-r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/f7/12/ec3f2e203afa394a149911729357aa48affc59c20e2c1c8297a60f33f133/threadpoolctl-2.1.0-py3-none-any.whl
+Collecting six>=1.5 (from python-dateutil>=2.7.3->pandas==1.1.4->-r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
+Installing collected packages: numpy, six, python-dateutil, pytz, pandas, scipy, joblib, threadpoolctl, scikit-learn
+Could not install packages due to an EnvironmentError: [Errno 2] No such file or directory: 'c:\\users\\bumsky\\desktop\\deployment-of-titanic-ml-model\\packages\\classification_model\\.tox\\classification_model\\Lib\\site-packages\\sklearn\\datasets\\tests\\data\\openml\\292\\api-v1-json-data-list-data_name-australian-limit-2-data_version-1-status-deactivated.json.gz'
+
+You are using pip version 10.0.1, however version 20.3b1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
