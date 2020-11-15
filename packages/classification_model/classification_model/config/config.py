@@ -23,13 +23,9 @@ FEATURES = ['Pclass', 'Name', 'Sex', 'SibSp', 'Parch', 'Fare',
 MAIN_FEATURES =  ['Pclass', 'Sex', 'Fare', 'Embarked', 'Title',
 				'Fam_Type']				
 				
-SIMPLE_IMPUTER_TRAIN = 'Embarked'
+SIMPLE_IMPUTER = 'Embarked'
 				
-
-SIMPLE_IMPUTER_TEST = 'Fare'
-
 				
 CATEGORICAL_ENCODE = ['Sex', 'Embarked','Title',
 				'Fam_Type']
 				
-FEATURE_SCALE = 'Fare'

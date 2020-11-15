@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Bumsky\Desktop\Deployment-of-Titanic-Ml-Model\packages\classification_model\.tox\py37"
+VIRTUAL_ENV="C:\Users\Bumsky\Desktop\Deployment-of-titanic-ml-model\packages\classification_model\.tox\py37"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\Users\Bumsky\Desktop\Deployment-of-Titanic-Ml-Model\packages\classification_model\.tox\py37"
+$env:VIRTUAL_ENV="C:\Users\Bumsky\Desktop\Deployment-of-titanic-ml-model\packages\classification_model\.tox\py37"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

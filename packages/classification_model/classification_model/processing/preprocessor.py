@@ -5,14 +5,14 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.model_selection import train_test_split
 
 
 class pipeline:
 	
 	
 	def __init__(self, target,features, main_features,
-					simple_imputer_train, simple_imputer_test, categorical_encode,
-					feature_scale):
+					simple_imputer, categorical_encode):
 		
 		#initialize data_sets as none
 		self.X_train = None
@@ -24,10 +24,9 @@ class pipeline:
 		self.target = target
 		self.features = features
 		self.main_features = main_features
-		self.simple_imputer_train = simple_imputer_train
-		self.simple_imputer_test = simple_imputer_test
+		self.simple_imputer = simple_imputer
 		self.categorical_encode  = categorical_encode
-		self.feature_scale = feature_scale
+	
 		
 		
 		#model build
@@ -36,8 +35,6 @@ class pipeline:
 		#feature engineering
 		#i have two different imputers because different variables were missing in train and test set
 		self.imputer1 = SimpleImputer(missing_values =np.nan, strategy='most_frequent')
-
-		self.imputer2 = SimpleImputer(missing_values =np.nan, strategy='mean')
 		
 		self.scalar = StandardScaler()
 
@@ -69,40 +66,49 @@ class pipeline:
 		
 		
 		
-	#**Fit and transform data for training**
+	#**Fit data for training**
 	
-	def fit_transform(self, train_data):
-	
-		#separating dataset
+	def fit(self, train_data):
+		#pick x and y values
 		self.X_train = train_data[self.features]
 		self.Y_train = train_data[self.target]
-			
-		#create new feature
+		
+		#create new features
 		self.X_train = self.title(df = self.X_train)
 		self.X_train = self.family_type(df = self.X_train)
-			
+		
 		#drop features
 		self.X_train = self.X_train[self.main_features]
 		
 		#impute missing values
-		imp = self.X_train[self.simple_imputer_train].values.reshape(-1,1)
-		self.X_train[self.simple_imputer_train] = self.imputer1.fit_transform(imp)
-		
-		#feature_scale
-		fmp = self.X_train[self.feature_scale].values.reshape(-1,1)
-		self.X_train[self.feature_scale] = self.scalar.fit_transform(fmp)
-		
+		imp = self.X_train[self.simple_imputer].values.reshape(-1,1)
+		self.imputer1.fit(imp)
+		self.X_train[self.simple_imputer] = self.imputer1.transform(imp)
 		
 		#encode categorical values
-		self.X_train = np.array(self.categorical.fit_transform(self.X_train))
+		self.categorical.fit(self.X_train)
+		self.X_train = np.array(self.categorical.transform(self.X_train))
+		
+		#separating dataset
+		self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(
+        self.X_train, self.Y_train, test_size=0.1, random_state=0
+		)
+		
+		#feature_scale
+		fmp = self.X_train[:, [16]].reshape(-1,1)
+		self.scalar.fit(fmp)
+		self.X_train[:, [16]] = self.scalar.transform(fmp)
+		self.X_test[:,[16]] = self.scalar.transform(self.X_test[:,[16]])
 		
 		#train model
-		self.classifier.fit(self.X_train, self.Y_train)
+		self.classifier.fit(self.X_train, self.Y_train)	
+		
 		return self
 	
-	
-	def transform(self, data):
+			
 	#transform data for prediction
+	def transform(self, data):
+		#transform data for prediction
 		data = data.copy()
 		
 		#create new feature
@@ -112,16 +118,17 @@ class pipeline:
 		#drop features
 		data = data[self.main_features]
 		
-		#impute missing values
-		imp = data[self.simple_imputer_test].values.reshape(-1,1)
-		data[self.simple_imputer_test] = self.imputer2.fit_transform(imp)
+		#simple imputer
+		imp = data[self.simple_imputer].values.reshape(-1,1)
+		data[self.simple_imputer] = self.imputer1.transform(imp)
 		
-		#feature_scale
-		fmp = data[self.feature_scale].values.reshape(-1,1)
-		data[self.feature_scale] = self.scalar.fit_transform(fmp)
 
 		#encode categorical values
-		data = np.array(self.categorical.fit_transform(data))
+		data = np.array(self.categorical.transform(data))
+		
+		#feature_scale
+		fmp = data[:, [16]].reshape(-1,1)
+		data[:, [16]] = self.scalar.transform(fmp)
 		
 		return data
 		
@@ -135,7 +142,10 @@ class pipeline:
 	
 	def evaluate_model(self):
 	#evaluate model performance
+		prediction_test = self.classifier.predict(self.X_test)
+		print('Xtest accuracy: {}'.format((accuracy_score(self.Y_test, prediction_test))))
+		print('confusion matrix: {}'.format((confusion_matrix(self.Y_test, prediction_test))))
 		
 		prediction_train = self.classifier.predict(self.X_train)
-		print('test accuracy: {}'.format((accuracy_score(self.Y_train, prediction_train))))
+		print('Xtrain accuracy: {}'.format((accuracy_score(self.Y_train, prediction_train))))
 		print('confusion matrix: {}'.format((confusion_matrix(self.Y_train, prediction_train))))
