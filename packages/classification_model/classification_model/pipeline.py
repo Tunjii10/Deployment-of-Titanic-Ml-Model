@@ -7,10 +7,8 @@ from classification_model.processing import preprocessor
 pipeline = preprocessor.pipeline(target = config.TARGET,
 					features = config.FEATURES,
 					main_features = config.MAIN_FEATURES,
-					simple_imputer_train = config.SIMPLE_IMPUTER_TRAIN,	
-					simple_imputer_test = config.SIMPLE_IMPUTER_TEST,
+					simple_imputer = config.SIMPLE_IMPUTER,	
 					categorical_encode = config.CATEGORICAL_ENCODE,
-					feature_scale = config.FEATURE_SCALE
 					)
 					
 if __name__ == '__main__':
@@ -20,7 +18,7 @@ if __name__ == '__main__':
 	train_data = pd.read_csv(config.DATASET_DIR / config.TRAINING_DATA_FILE)
 
 	#train model
-	pipeline.fit_transform(train_data)
+	pipeline.fit(train_data)
 	
 	#model performance
 	print('model perfomance')

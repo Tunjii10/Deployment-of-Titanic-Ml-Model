@@ -92,7 +92,7 @@ PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 982,3,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",female,22,1,0,347072,13.9,,S
 983,3,"Pedersen, Mr. Olaf",male,,0,0,345498,7.775,,S
 984,1,"Davidson, Mrs. Thornton (Orian Hays)",female,27,1,2,F.C. 12750,52,B71,S
-985,3,"Guest, Mr. Robert",male,,0,0,376563,8.05,,S
+985,3,"Guest, Mr. Robert",male,,0,0,376563,8.05,,
 986,1,"Birnbaum, Mr. Jakob",male,25,0,0,13905,26,,C
 987,3,"Tenglin, Mr. Gunnar Isidor",male,25,0,0,350033,7.7958,,S
 988,1,"Cavendish, Mrs. Tyrell William (Julia Florence Siegel)",female,76,1,0,19877,78.85,C46,S
@@ -151,7 +151,7 @@ PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 1041,2,"Lahtinen, Rev. William",male,30,1,1,250651,26,,S
 1042,1,"Earnshaw, Mrs. Boulton (Olive Potter)",female,23,0,1,11767,83.1583,C54,C
 1043,3,"Matinoff, Mr. Nicola",male,,0,0,349255,7.8958,,C
-1044,3,"Storey, Mr. Thomas",male,60.5,0,0,3701,,,S
+1044,3,"Storey, Mr. Thomas",male,60.5,0,0,3701,0,,S
 1045,3,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",female,36,0,2,350405,12.1833,,S
 1046,3,"Asplund, Master. Filip Oscar",male,13,4,2,347077,31.3875,,S
 1047,3,"Duquemin, Mr. Joseph",male,24,0,0,S.O./P.P. 752,7.55,,S
@@ -188,14 +188,14 @@ PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 1078,2,"Phillips, Miss. Alice Frances Louisa",female,21,0,1,S.O./P.P. 2,21,,S
 1079,3,"Davies, Mr. Joseph",male,17,2,0,A/4 48873,8.05,,S
 1080,3,"Sage, Miss. Ada",female,,8,2,CA. 2343,69.55,,S
-1081,2,"Veal, Mr. James",male,40,0,0,28221,13,,S
+1081,2,"Veal, Mr. James",male,40,0,0,28221,13,,
 1082,2,"Angle, Mr. William A",male,34,1,0,226875,26,,S
 1083,1,"Salomon, Mr. Abraham L",male,,0,0,111163,26,,S
 1084,3,"van Billiard, Master. Walter John",male,11.5,1,1,A/5. 851,14.5,,S
 1085,2,"Lingane, Mr. John",male,61,0,0,235509,12.35,,Q
 1086,2,"Drew, Master. Marshall Brines",male,8,0,2,28220,32.5,,S
 1087,3,"Karlsson, Mr. Julius Konrad Eugen",male,33,0,0,347465,7.8542,,S
-1088,1,"Spedden, Master. Robert Douglas",male,6,0,2,16966,134.5,E34,C
+1088,1,"Spedden, Master. Robert Douglas",male,6,0,2,16966,134.5,E34,
 1089,3,"Nilsson, Miss. Berta Olivia",female,18,0,0,347066,7.775,,S
 1090,2,"Baimbrigge, Mr. Charles Robert",male,23,0,0,C.A. 31030,10.5,,S
 1091,3,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",female,,0,0,65305,8.1125,,S
@@ -321,7 +321,7 @@ PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 1211,2,"Jefferys, Mr. Ernest Wilfred",male,22,2,0,C.A. 31029,31.5,,S
 1212,3,"Andersson, Mr. Johan Samuel",male,26,0,0,347075,7.775,,S
 1213,3,"Krekorian, Mr. Neshan",male,25,0,0,2654,7.2292,F E57,C
-1214,2,"Nesson, Mr. Israel",male,26,0,0,244368,13,F2,S
+1214,2,"Nesson, Mr. Israel",male,26,0,0,244368,13,F2,
 1215,1,"Rowe, Mr. Alfred G",male,33,0,0,113790,26.55,,S
 1216,1,"Kreuchen, Miss. Emilie",female,39,0,0,24160,211.3375,,S
 1217,3,"Assam, Mr. Ali",male,23,0,0,SOTON/O.Q. 3101309,7.05,,S

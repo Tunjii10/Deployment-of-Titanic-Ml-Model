@@ -18,8 +18,8 @@ def run_training() -> None:
 	
 	data = pd.read_csv(config.DATASET_DIR / config.TRAINING_DATA_FILE)
 	
-   
-	pipeline.pipeline.fit_transform(data)
+    #actual training by calling pipeline class
+	pipeline.pipeline.fit(data)
 
 	print("saving pipeline")
 	save_pipeline(pipeline_to_persist=pipeline.pipeline)
