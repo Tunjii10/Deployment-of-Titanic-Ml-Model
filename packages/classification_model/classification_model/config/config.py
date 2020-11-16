@@ -19,6 +19,7 @@ TARGET = "Survived"
 
 FEATURES = ['Pclass', 'Name', 'Sex', 'SibSp', 'Parch', 'Fare',
 			'Embarked']
+			
 
 MAIN_FEATURES =  ['Pclass', 'Sex', 'Fare', 'Embarked', 'Title',
 				'Fam_Type']				
@@ -29,3 +30,4 @@ SIMPLE_IMPUTER = 'Embarked'
 CATEGORICAL_ENCODE = ['Sex', 'Embarked','Title',
 				'Fam_Type']
 				
+FEATURES_VALIDATE = ['Pclass', 'Name', 'Sex', 'SibSp', 'Parch', 'Fare']

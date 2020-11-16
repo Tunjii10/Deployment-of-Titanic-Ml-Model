@@ -38,7 +38,7 @@ class pipeline:
 		
 		self.scalar = StandardScaler()
 
-		self.categorical = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), self.categorical_encode)], remainder='passthrough')
+		self.categorical = ColumnTransformer(transformers=[('encoder', OneHotEncoder(handle_unknown = 'ignore'), self.categorical_encode)], remainder='passthrough')
 
 		
 	#***Create new features	****
