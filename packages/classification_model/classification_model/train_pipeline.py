@@ -5,23 +5,26 @@ import joblib
 from classification_model import pipeline
 from classification_model.config import config
 
-def save_pipeline(*,pipeline_to_persist) -> None:
-	
-	
-	save_file_name = 'classification_model.pkl'
-	save_path = config.TRAINED_MODEL_DIR / save_file_name
-	joblib.dump(pipeline_to_persist, save_path)
-	
-	print("saved pipeline")
+from classification_model.processing.data_management import load_dataset, save_pipeline
+from classification_model import __version__ as _version
+
+import logging
+
+_logger = logging.getLogger('classification_model')
+
+
 	
 def run_training() -> None:
 	
-	data = pd.read_csv(config.DATASET_DIR / config.TRAINING_DATA_FILE)
+	# read training data
+	data = load_dataset(file_name=config.TRAINING_DATA_FILE)	
+    
 	
-    #actual training by calling pipeline class
+	#actual training by calling pipeline class
 	pipeline.pipeline.fit(data)
 
-	print("saving pipeline")
+    #save pipeline
+	_logger.info(f"saving model version: {_version}")
 	save_pipeline(pipeline_to_persist=pipeline.pipeline)
 
 
