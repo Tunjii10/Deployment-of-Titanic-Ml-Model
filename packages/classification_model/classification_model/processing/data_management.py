@@ -3,9 +3,13 @@ import numpy as np
 import joblib
 
 from classification_model.config import config
+from classification_model import __version__ as _version
+
+import logging
+import typing as t
 
 
-
+_logger = logging.getLogger(__name__)
 
 
 def load_dataset(*, file_name: str) -> pd.DataFrame:
@@ -16,13 +20,14 @@ def load_dataset(*, file_name: str) -> pd.DataFrame:
 def save_pipeline(*, pipeline_to_persist) -> None:
 	"""Persist the pipeline"""
 
-	# Prepare versioned save file name
-	save_file_name = "classification_model.pkl"
+	#save file with version
+	save_file_name = f"{config.PIPELINE_SAVE_FILE}{_version}.pkl"
 	save_path = config.TRAINED_MODEL_DIR / save_file_name
 
+	remove_old_pipelines(files_to_keep=[save_file_name])	
 	joblib.dump(pipeline_to_persist, save_path)
+	_logger.info(f"saved pipeline: {save_file_name}")
 
-	print("saved pipeline")
 
 def load_pipeline(*, file_name: str):
     """Load a persisted pipeline."""
@@ -31,4 +36,11 @@ def load_pipeline(*, file_name: str):
     trained_model = joblib.load(filename=file_path)
     return trained_model
 
-
+def remove_old_pipelines(*, files_to_keep: t.List[str]) -> None:
+	"""
+	Remove old saved model pipelines.
+	"""
+	do_not_delete = files_to_keep + ['__init__.py']
+	for model_file in config.TRAINED_MODEL_DIR.iterdir():
+		if model_file.name not in do_not_delete:
+			model_file.unlink()

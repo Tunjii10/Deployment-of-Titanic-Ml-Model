@@ -31,3 +31,9 @@ CATEGORICAL_ENCODE = ['Sex', 'Embarked','Title',
 				'Fam_Type']
 				
 FEATURES_VALIDATE = ['Pclass', 'Name', 'Sex', 'SibSp', 'Parch', 'Fare']
+
+
+PIPELINE_NAME = "Random_forest"
+
+
+PIPELINE_SAVE_FILE = f"{PIPELINE_NAME}_output_v"
