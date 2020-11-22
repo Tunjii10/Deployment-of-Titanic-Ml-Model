@@ -1,0 +1,56 @@
+action: install_locally, msg: getenv
+cwd: C:\Users\Bumsky\Desktop\Deployment-of-titanic-ml-model\packages\classification_model
+cmd: 'C:\Users\Bumsky\Desktop\Deployment-of-titanic-ml-model\packages\classification_model\.tox\install_locally\Scripts\pip.EXE' install -rrequirements.txt
+Collecting numpy==1.19.4 (from -r requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/7b/05/558d6ac441c3c84ec413ba85f5f8e978283b4d105e4a56cff0f2c46b4134/numpy-1.19.4-cp37-cp37m-win32.whl
+Collecting pandas==1.1.4 (from -r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/f4/32/e3d08b3f2d7ea5ec1eda9667bb6d59ba906d7fa45041065d7feba1786be6/pandas-1.1.4-cp37-cp37m-win32.whl
+Collecting scikit_learn==0.23.0 (from -r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/c6/1c/05fffda99f42966925e042f4d010b30bd4fb1ac9b3737a6e06e5c5a1604d/scikit_learn-0.23.0-cp37-cp37m-win32.whl
+Collecting joblib==0.17.0 (from -r requirements.txt (line 5))
+  Using cached https://files.pythonhosted.org/packages/fc/c9/f58220ac44a1592f79a343caba12f6837f9e0c04c196176a3d66338e1ea8/joblib-0.17.0-py3-none-any.whl
+Collecting pytest==6.1.1 (from -r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/d6/36/9e022b76a3ac440e1d750c64fa6152469f988efe0c568b945e396e2693b5/pytest-6.1.1-py3-none-any.whl
+Collecting setuptools==50.1.0 (from -r requirements.txt (line 11))
+  Downloading https://files.pythonhosted.org/packages/35/f7/f86e670ebd628f447845798aa3b6a1b6da235941a1591d664d718aac171c/setuptools-50.1.0-py3-none-any.whl (784kB)
+Collecting wheel==0.35.1 (from -r requirements.txt (line 12))
+  Downloading https://files.pythonhosted.org/packages/a7/00/3df031b3ecd5444d572141321537080b40c1c25e1caa3d86cdd12e5e919c/wheel-0.35.1-py2.py3-none-any.whl
+Collecting pytz>=2017.2 (from pandas==1.1.4->-r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/12/f8/ff09af6ff61a3efaad5f61ba5facdf17e7722c4393f7d8a66674d2dbd29f/pytz-2020.4-py2.py3-none-any.whl
+Collecting python-dateutil>=2.7.3 (from pandas==1.1.4->-r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl
+Collecting threadpoolctl>=2.0.0 (from scikit_learn==0.23.0->-r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/f7/12/ec3f2e203afa394a149911729357aa48affc59c20e2c1c8297a60f33f133/threadpoolctl-2.1.0-py3-none-any.whl
+Collecting scipy>=0.19.1 (from scikit_learn==0.23.0->-r requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/f4/4a/d2a1ace4fb6f94a4f6ac553be45249719c25185e7b10975f916e523d146c/scipy-1.5.4-cp37-cp37m-win32.whl
+Collecting iniconfig (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/9b/dd/b3c12c6d707058fa947864b67f0c4e0c39ef8610988d7baea9578f3c48f3/iniconfig-1.1.1-py2.py3-none-any.whl
+Collecting colorama; sys_platform == "win32" (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl
+Collecting pluggy<1.0,>=0.12 (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
+Collecting toml (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl
+Collecting importlib-metadata>=0.12; python_version < "3.8" (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/6d/6d/f4bb28424bc677bce1210bc19f69a43efe823e294325606ead595211f93e/importlib_metadata-2.0.0-py2.py3-none-any.whl
+Collecting packaging (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/46/19/c5ab91b1b05cfe63cccd5cfc971db9214c6dd6ced54e33c30d5af1d2bc43/packaging-20.4-py2.py3-none-any.whl
+Collecting atomicwrites>=1.0; sys_platform == "win32" (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/2c/a0/da5f49008ec6e9a658dbf5d7310a4debd397bce0b4db03cf8a410066bb87/atomicwrites-1.4.0-py2.py3-none-any.whl
+Collecting py>=1.8.2 (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/68/0f/41a43535b52a81e4f29e420a151032d26f08b62206840c48d14b70e53376/py-1.9.0-py2.py3-none-any.whl
+Collecting attrs>=17.4.0 (from pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/c3/aa/cb45262569fcc047bf070b5de61813724d6726db83259222cd7b4c79821a/attrs-20.3.0-py2.py3-none-any.whl
+Collecting six>=1.5 (from python-dateutil>=2.7.3->pandas==1.1.4->-r requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl
+Collecting zipp>=0.5 (from importlib-metadata>=0.12; python_version < "3.8"->pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/41/ad/6a4f1a124b325618a7fb758b885b68ff7b058eec47d9220a12ab38d90b1f/zipp-3.4.0-py3-none-any.whl
+Collecting pyparsing>=2.0.2 (from packaging->pytest==6.1.1->-r requirements.txt (line 8))
+  Using cached https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl
+Installing collected packages: numpy, pytz, six, python-dateutil, pandas, joblib, threadpoolctl, scipy, scikit-learn, iniconfig, colorama, zipp, importlib-metadata, pluggy, toml, pyparsing, packaging, atomicwrites, py, attrs, pytest, setuptools, wheel
+  Found existing installation: setuptools 39.0.1
+    Uninstalling setuptools-39.0.1:
+      Successfully uninstalled setuptools-39.0.1
+Successfully installed atomicwrites-1.4.0 attrs-20.3.0 colorama-0.4.4 importlib-metadata-2.0.0 iniconfig-1.1.1 joblib-0.17.0 numpy-1.19.4 packaging-20.4 pandas-1.1.4 pluggy-0.13.1 py-1.9.0 pyparsing-2.4.7 pytest-6.1.1 python-dateutil-2.8.1 pytz-2020.4 scikit-learn-0.23.0 scipy-1.5.4 setuptools-50.1.0 six-1.15.0 threadpoolctl-2.1.0 toml-0.10.2 wheel-0.35.1 zipp-3.4.0
+You are using pip version 10.0.1, however version 20.3b1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.

@@ -6,3 +6,7 @@ joblib==0.17.0
 
 #testing requirements
 pytest==6.1.1
+
+#packaging
+setuptools==50.1.0
+wheel==0.35.1
