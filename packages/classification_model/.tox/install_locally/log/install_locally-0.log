@@ -1,3 +1,0 @@
-action: install_locally, msg: getenv
-cwd: C:\Users\Bumsky\Desktop\Deployment-of-titanic-ml-model\packages\classification_model\.tox
-cmd: 'c:\users\bumsky\appdata\local\programs\python\python37-32\python.exe' -m venv install_locally

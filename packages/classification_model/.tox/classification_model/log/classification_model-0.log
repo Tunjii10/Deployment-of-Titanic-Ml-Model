@@ -1,3 +1,0 @@
-action: classification_model, msg: getenv
-cwd: C:\Users\Bumsky\Desktop\Deployment-of-Titanic-Ml-Model\packages\classification_model\.tox
-cmd: 'c:\users\bumsky\appdata\local\programs\python\python37-32\python.exe' -m venv classification_model
