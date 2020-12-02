@@ -1,0 +1,8 @@
+#api
+flask == 1.1.2
+
+#schema validation
+marshmallow == 3.9.0
+
+#package directory
+-e "C:\Users\Bumsky\Desktop\Deployment-of-titanic-ml-model\packages\classification_model"
